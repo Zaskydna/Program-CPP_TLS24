@@ -271,7 +271,8 @@ int main()
           cin>>a;
           cout<<"Masukkan Tinggi Limas :";
           cin>>t;
-          cout<<"Maaf Rumus Belum ada.";
+          Luaspermukaan=(sqrt((0.25*a*a)+(t*t))*a*2)+(a*a);
+          cout<<"Luas permukaan nya adalah "<<Luaspermukaan;
         }
       }else if(pilihan2=='f'){
         cout<<"Apa yang anda cari ?\n";
@@ -281,13 +282,18 @@ int main()
         cin>>pilihan13 ;
         
         if(pilihan13=='V'){
-          cout<<"Masukkan Luas alas :";
+          cout<<"Masukkan sisi alas :";
           cin>>a;
           cout<<"Masukkan Tinggi :";
           cin>>t;
-          Volume=a*t/3;
+          Volume=0.25*a*a*t*sqrt(3)/3;
           cout<<"Volume nya adalah "<<Volume;
-        }
+        }else if(pilihan13=='P'){
+          cout<<"Masukkan sisi alas :";
+          cin>>a;
+          Luaspermukaan= 0.25*a*a*sqrt(3)*4;
+          cout<<"Luas permukaan nya adalah "<<Luaspermukaan;
+      }
       }else if(pilihan2=='g'){
         cout<<"Apa yang anda cari ?\n";
         cout<<"V. Volume\n";
@@ -296,14 +302,21 @@ int main()
         cin>>pilihan14 ;
         
         if(pilihan14=='V'){
-          cout<<"Masukkan Luas alas :";
+          cout<<"Masukkan sisi alas :";
           cin>>a;
           cout<<"Masukkan tinggi :";
           cin>>t;
-          Volume=a*t;
+          Volume=0.25*a*a*t*sqrt(3);
           cout<<"Volumenya adalah "<<Volume;
-        }
-      }else if(pilihan2=='h'){
+        } else if(pilihan14=='P'){
+          cout<<"Masukkan sisi alas :";
+          cin>>a;
+          cout<<"Masukkan Tinggi prisma :";
+          cin>>t;
+          Luaspermukaan=(0.5*a*a*sqrt(3))+(3*a*t);
+          cout<<" Luas Permukaan nya adalah "<<Luaspermukaan;
+      }
+      else if(pilihan2=='h'){
         cout<<"Apa yang anda cari ?\n";
         cout<<"V. Volume\n";
         cout<<"P. Permukaan\n";
@@ -311,13 +324,20 @@ int main()
         cin>>pilihan15 ;
         
         if(pilihan15=='V'){
-          cout<<"Masukkan luas alas :";
+          cout<<"Masukkan sisi alas :";
           cin>>a;
           cout<<"Masukkan tinggi :";
           cin>>t;
-          Volume=a*t;
+          Volume=a*a*t;
           cout<<"Volumenya adalah "<<Volume;
-        }
+        }else if(pilihan15=='P'){
+          cout<<"Masukkan sisi alas :";
+          cin>>a;
+          cout<<"Masukkan Tinggi prisma :";
+          cin>>t;
+          Luaspermukaan=(2*a*a)+(4*a*t);
+          cout<<" Luas Permukaan nya adalah "<<Luaspermukaan;
+      }
       }
     }else if(pilihan2=='i'){
       cout<<"Apa yang anda cari ?\n";
@@ -325,7 +345,7 @@ int main()
         cout<<"P. Permukaan\n";
         cout<<"V/P ? ";
         cin>>pilihan16 ;
-        
+
         if(pilihan16=='V'){
           cout<<"Masukkan jari-jari :";
           cin>>r;
@@ -342,5 +362,5 @@ int main()
     }else{
       cout<<"Data yang anda input salah.";
 }
-
+}
 }
